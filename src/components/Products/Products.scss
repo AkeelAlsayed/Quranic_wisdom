@@ -1,0 +1,111 @@
+// .verse_wrapper {
+//   h1 {
+//     font-size: 2em;
+//     text-align: center;
+//     margin-bottom: 20px;
+//   }
+// }
+// .product-grid {
+//   grid-column: 1 / -1;
+// }
+
+// .product-header {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//   grid-gap: 10px;
+//   margin: 20px 10px;
+// }
+
+// .product-name {
+//   font-size: 2rem;
+//   text-align: center;
+//   cursor: pointer;
+//   padding: 1rem;
+//   max-width: 200px; /*set maximum width of container*/
+//   margin: 0 auto; /* center align container horizontally */
+//   transition: all 0.2s ease-in-out;
+//   font-family: "Montserrat", sans-serif; /* add a nice font */
+//   border-radius: 10px; /* add rounded corners to container */
+//   box-shadow: 0px 0px 10px #ccc; /* add a subtle shadow */
+//   color: #333; /*change text color */
+
+//   &:hover {
+//     background-color: #f2f2f2;
+//     transform: scale(1.05); /* increase container size on hover */
+//   }
+// }
+
+.verse_wrapper {
+  font-family: ProximaVara, Helvetica Neue, Helvetica, Arial;
+
+  h1 {
+    font-size: 4em;
+    text-align: center;
+    // margin: 20px 10px 10px 10px;
+    padding: 1rem;
+    color: black;
+    box-shadow: black 1px 1px 10px 10px;
+    // background-color: rgba(131, 14, 14, 0.058);
+  }
+  .audio_edition_dropdown {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 85px;
+    z-index: 1;
+    background-color: #ffff;
+    padding: 20px;
+    margin: 0;
+    border-top: 1px black solid;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.product-grid {
+  grid-column: 1 / -1;
+}
+
+.product-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin: 20px 10px;
+}
+
+.product-name {
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  max-width: 200px; /* set maximum width of container */
+  margin: 0 auto; /* center align container horizontally */
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif; /* add a nice font */
+  border-radius: 10px; /* add rounded corners to container */
+  box-shadow: 0px 0px 10px #ccc; /* add a subtle shadow */
+  color: #333; /*change text color */
+  background-color: #333; /* change background color */
+  color: #f2f2f2; /* change text color to white */
+
+  &:hover {
+    background-color: #555; /* darken background color on hover */
+    transform: scale(1.05); /* increase container size on hover */
+  }
+}
+
+body {
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.674
+  ); /* change the background color of the body */
+  color: #f2f2f2; /* change the text color of the body */
+}
+
+/* Add any other elements you want to change the colors for here */
+
+/* change other colors if needed */
+
+// }

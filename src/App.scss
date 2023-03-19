@@ -1,0 +1,87 @@
+// router-wrapper
+// *{background-color: rgba(0, 0, 0, 0.237);}
+.verse_wrapper {
+  display: grid;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+
+  // gap: 20px;
+  background-color: rgba(0, 0, 0, 0.268);
+
+}
+
+//   .router-wrapper {
+//     .verse_wrapper {
+//       display: grid;
+//       text-align: center;
+//       // flex-direction: column;
+//       // justify-content: center;
+//       // flex-wrap: wrap;
+//       // align-content: center;
+//       // align-items: center;
+//       border: 2px solid black;
+//       margin: 20px;
+//       padding: 20px;
+//       font-size: 2rem;
+//       font-weight: bold;
+
+//       // gap: 20px;
+//       background-color: rgba(0, 0, 0, 0.268);
+//     }
+//     .verse {
+//       background: rgba(0, 0, 0, 0.105);
+//       padding: 20px;
+//       border: 1px solid black;
+//     }
+
+//     /* Define the grid container */
+//     .grid {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       background-color: rgba(128, 128, 128, 0.719);
+//       /* Define the grid items */
+
+//       .audio {
+//         margin: 50px auto;
+//         padding: 0;
+//         border: none;
+//         outline: none;
+//         box-shadow: 0px 0px 20px 10px;
+//         background-color: lightgray;
+//         border-radius: 10px;
+//         display: block;
+//         // using variables
+//         $audio-color: lightgray;
+//         $audio-radius: 10px;
+//         background-color: $audio-color;
+//         border-radius: $audio-radius;
+//       }
+//       .grid-item {
+//         display: grid;
+//         grid-template-columns: repeat(6, 1fr);
+//         grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+//         gap: 50px;
+//         :hover {
+//           background-color: rgb(243, 230, 230);
+//           border-radius: 10px;
+//         }
+//         .sura-name {
+//           display: flex;
+//           justify-content: center;
+//           align-content: center;
+//         }
+//       }
+//     }
+
+//   }
+// }

@@ -1,0 +1,60 @@
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  audio {
+    width: 100%;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    button {
+      background-color: #ddd;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 0 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+
+    .play-button {
+      background-color: #4caf50;
+      color: white;
+
+      &:hover {
+        background-color: #3e8e41;
+      }
+    }
+
+    .pause-button {
+      background-color: #f44336;
+      color: white;
+
+      &:hover {
+        background-color: #da190b;
+      }
+    }
+
+    .restart-button {
+      background-color: #2196f3;
+      color: white;
+
+      &:hover {
+        background-color: #0b7dda;
+      }
+    }
+  }
+
+  input[type="range"] {
+    width: 80%;
+    margin-top: 10px;
+  }
+}

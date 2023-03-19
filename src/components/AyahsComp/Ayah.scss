@@ -1,0 +1,381 @@
+// .verse {
+//   font-size: 1.5em;
+//   font-weight: bold;
+//   text-align: center;
+//   margin-bottom: 20px;
+
+//   .audio {
+//     width: 80%;
+//     margin: 50px auto;
+//     padding: 23px;
+//     border: none;
+//     outline: none;
+//     box-shadow: 0px 0px 20px 10px;
+//     background-color: lightgray;
+//     border-radius: 50px;
+//     display: block;
+//     position: relative;
+//     top: -20px;
+//     left: 50%;
+//     transform: translateX(-55%);
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//     //   top: -30px;
+//       box-shadow: 0px 0px 30px 20px;
+//       transform: scale(1.05) translateX(-50%);
+//     }
+
+//     &:active {
+//     //   top: -40px;
+//       box-shadow: 0px 0px 40px 30px;
+//     //   transform: scale(1.1) translateX(-50%);
+//     }
+//   }
+
+//   .restart-button {
+//     background-color: blue;
+//     color: white;
+//     border: none;
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//     font-size: 1.2em;
+//     margin-right: 10px;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: darkblue;
+//     }
+//   }
+// }
+
+// .verse {
+//   font-size: 1.5em;
+//   font-weight: bold;
+//   text-align: center;
+//   margin-bottom: 20px;
+// }
+
+// .audio {
+//   width: 80%;
+//   margin: 50px auto;
+//   padding: 23px;
+//   border: none;
+//   outline: none;
+//   box-shadow: 0px 0px 20px #ccc;
+//   background-color: #f2f2f2;
+//   border-radius: 50px;
+//   display: block;
+//   position: relative;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     box-shadow: 0px 0px 30px #ccc;
+//     transform: scale(1.05);
+//   }
+
+//   &:active {
+//     box-shadow: 0px 0px 40px #ccc;
+//   }
+// }
+
+// .restart-button {
+//   background-color: #007bff;
+//   color: #fff;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 5px;
+//   font-size: 1.2em;
+//   margin-right: 10px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background-color: #0069d9;
+//   }
+// }
+
+// :root {
+//   --primary-color: #007bff;
+//   --secondary-color: #f2f2f2;
+//   --tertiary-color: #ccc;
+// }
+
+// .verse {
+//   font-size: 1.5em;
+//   font-weight: bold;
+//   text-align: center;
+//   margin-bottom: 2rem;
+// }
+
+// .audio {
+//   width: 80%;
+//   margin: 2rem auto;
+//   padding: 1.5rem;
+//   border: none;
+//   outline: none;
+//   box-shadow: 0px 0px 20px var(--tertiary-color);
+//   background-color: var(--secondary-color);
+//   border-radius: 50px;
+//   display: block;
+//   position: relative;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     box-shadow: 0px 0px 30px var(--tertiary-color);
+//     transform: scale(1.05);
+//   }
+
+//   &:active {
+//     box-shadow: 0px 0px 40px var(--tertiary-color);
+//   }
+// }
+
+// .restart-button {
+//   background-color: var(--primary-color);
+//   color: #fff;
+//   border: none;
+//   padding: 1rem 2rem;
+//   border-radius: 5px;
+//   font-size: 1.2em;
+//   margin-right: 1rem;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background-color: darkblue(var(--primary-color), 10%);
+//   }
+// }
+
+// :root {
+//   --primary-color: #007bff;
+//   --secondary-color: #f2f2f2;
+//   --tertiary-color: #ccc;
+// }
+
+// .verse {
+//   // font-size: 2rem;
+//   // height: 300px;
+//   font-weight: bold;
+//   text-align: center;
+//   margin: 2rem;
+//   padding: 1rem;
+//   color: black;
+//   box-shadow: black 0px 1px 30px 10px;
+//   p {
+//     font-size: 3rem;
+//     font-weight: bold;
+//     text-align: center;
+//     margin: 2rem;
+//     padding: 1rem;
+//     // color: black;
+//     box-shadow: black 1px 1px 10px 10px;
+//     background-color: rgba(131, 14, 14, 0.058);
+//   }
+// }
+
+// .audio {
+//   width: 80%;
+//   // height: 2rem;
+//   margin: 2rem auto;
+//   // padding: 0rem;
+//   border: none;
+//   outline: none;
+//   box-shadow: 0px 0px 20px var(--tertiary-color);
+//   background-color: var(--secondary-color);
+//   border-radius: 50px;
+//   display: block;
+//   position: relative;
+//   transition: all 0.3s ease;
+//   cursor: pointer;
+
+//   &:hover {
+//     box-shadow: 0px 0px 30px var(--tertiary-color);
+//     transform: scale(1.01);
+//   }
+
+//   &:active {
+//     box-shadow: 0px 0px 40px var(--tertiary-color);
+//   }
+// }
+
+// .audio:before {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 0;
+//   height: 0;
+//   border-radius: 50%;
+//   background-color: var(--primary-color);
+//   transition: all 0.3s ease;
+// }
+
+// .audio:hover:before {
+//   width: 60%;
+//   height: 60%;
+// }
+
+// // .restart-button {
+// //   background-color: red;
+// //   // color: #fff;
+// //   border: none;
+// //   padding: 1rem 2rem;
+// //   border-radius: 5px;
+// //   font-size: 1.2em;
+// //   margin-right: 1rem;
+// //   cursor: pointer;
+// //   transition: all 0.3s ease;
+// //   box-shadow: 0px 0px 20px var(--tertiary-color);
+
+// //   &:hover {
+// //     background-color: rgba(132, 4, 4, 0.504);
+// //     // white(var(--primary-color), 100%);
+// //     box-shadow: 0px 0px 30px var(--tertiary-color);
+// //   }
+// // }
+// // .verse {
+// //   display: flex;
+// //   flex-direction: column;
+// //   align-items: center;
+// //   background-color: lightgray;
+// //   padding: 20px;
+// //   border-radius: 10px;
+// //   box-shadow: 0px 0px 10px 5px #ccc;
+// //   margin-bottom: 20px;
+// // }
+
+// // p {
+// //   text-align: center;
+// //   font-size: 18px;
+// //   margin-bottom: 10px;
+// // }
+
+// .restart-button,
+// button {
+//   border: none;
+//   background-color: lightblue;
+//   color: black;
+//   padding: 10px 20px;
+//   border-radius: 20px;
+//   font-size: 16px;
+//   box-shadow: 0px 0px 10px 5px #ccc;
+//   margin-right: 10px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+// }
+
+// .restart-button,
+// button:hover {
+//   background-color: darkblue;
+//   box-shadow: 0px 0px 20px 10px #ccc;
+// }
+
+// .restart-button,
+// button:active {
+//   background-color: blue;
+//   box-shadow: 0px 0px 30px 20px #ccc;
+// }
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f2f2f2;
+  --tertiary-color: #ccc;
+}
+
+.verse {
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+  color: black;
+  box-shadow: 0px 1px 30px 10px black;
+
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px 10px black;
+    background-color: rgba(131, 14, 14, 0.058);
+  }
+}
+
+.audio {
+  width: 80%;
+  margin: 2rem auto;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 20px var(--tertiary-color);
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0.7;
+  &:hover {
+    box-shadow: 0px 0px 30px var(--tertiary-color);
+    transform: scale(1.01);
+    opacity: 1;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 40px var(--tertiary-color);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      width: 60%;
+      height: 60%;
+    }
+  }
+}
+
+button,
+.restart-button {
+  border: none;
+  background-color: lightblue;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px 5px #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darkblue;
+    box-shadow: 0px 0px 20px 10px #ccc;
+  }
+
+  &:active {
+    background-color: blue;
+    box-shadow: 0px 0px 30px 20px #ccc;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  font-size: 10px;
+  font-weight: bold;
+  .item {
+    border: 1px black solid;
+    padding: 10px;
+    margin: 1px;
+  }
+}
