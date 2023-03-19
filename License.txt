@@ -1,0 +1,9 @@
+Quranic_Wisdom Non-Reproduction License (QW-NRL)
+
+Copyright (c) [9/03/2023] Akeel
+
+Permission is NOT granted to reproduce, modify, or distribute any part of the code for the website Quranic_Wisdom, nor to use the name Quranic_Wisdom or my name, without prior written permission from the owner.
+
+Any reproduction, modification, or distribution of this code without permission is strictly prohibited and will result in legal action.
+
+THE CODE FOR Quranic_Wisdom IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE OWNERS OF Quranic_Wisdom BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CODE OR THE USE OR OTHER DEALINGS IN THE CODE.
