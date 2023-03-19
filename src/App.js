@@ -1,3 +1,7 @@
+// import "./App.css";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+// import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 // pages
