@@ -230,7 +230,7 @@ import React, { useState, useEffect } from "react";
 // import Audio from "../AudioPlayerComp/AudioPlayer";
 import "./Ayah.scss";
 
-function Ayah({ surah, verse, index, Id}) {
+function Ayah({ surah, verse, index, Id, translation }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [currentAudioIndex, setCurrentAudioIndex] = useState(index);
@@ -289,6 +289,7 @@ function Ayah({ surah, verse, index, Id}) {
   // console.log(surah.edition.language);
 
   // console.log(surahTranslated)
+  // console.log(translation);
   const handlePause = () => {
     setIsPlaying(false);
     const audio = document.querySelector(
@@ -330,6 +331,11 @@ function Ayah({ surah, verse, index, Id}) {
       {/* <p>{ayahsArray.edition.language}</p> */}
       <div>Recitation language :{surah.edition.language}</div>
       <p>{text}</p>
+      <div className="ayah_text">{verse.text}</div>
+      {translation && (
+        <div className="ayah_translation">{translation.text}</div>
+      )}
+
       {/* {Id !== 1 && verse.number==8 ? text:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"} */}
       {/* {verse.text.includes("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")
         ? verse.text.replace("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ", "")
