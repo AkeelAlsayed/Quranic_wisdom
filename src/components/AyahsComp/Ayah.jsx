@@ -287,9 +287,9 @@ function Ayah({ surah, verse, index, Id, translation }) {
     // audio.addEventListener("ended", () => clearInterval(intervalId));
   };
   // console.log(surah.edition.language);
-
-  // console.log(surahTranslated)
-  // console.log(translation);
+  // const array = translation[1].ayahs;
+  // console.log(array);
+  // console.log(selectedTranslationEdition);
   const handlePause = () => {
     setIsPlaying(false);
     const audio = document.querySelector(
@@ -314,6 +314,7 @@ function Ayah({ surah, verse, index, Id, translation }) {
   //   setAudioProgress((currentTime / duration) * 100);
   // };
   // console.log(surahTranslated)
+  // console.log(translation);
   let text;
   if (
     verse.text.includes("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ") &&
@@ -331,10 +332,6 @@ function Ayah({ surah, verse, index, Id, translation }) {
       {/* <p>{ayahsArray.edition.language}</p> */}
       <div>Recitation language :{surah.edition.language}</div>
       <p>{text}</p>
-      <div className="ayah_text">{verse.text}</div>
-      {translation && (
-        <div className="ayah_translation">{translation.text}</div>
-      )}
 
       {/* {Id !== 1 && verse.number==8 ? text:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"} */}
       {/* {verse.text.includes("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")

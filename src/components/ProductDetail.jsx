@@ -131,8 +131,6 @@ function ProductDetail() {
       });
   }, [Id, selectedAudioEdition]);
 
-  // console.log(surahWithTranslation[1].ayahs);
-
   const handleAudioEditionChange = (event) => {
     setSelectedAudioEdition(event.target.value);
   };
@@ -170,30 +168,16 @@ function ProductDetail() {
 
       <h1>{surah?.name}</h1>
       {Id !== 1 && <h1>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>}
-      {/* {surah?.ayahs.map((verse, index) => (
+      {surah?.ayahs.map((verse, index) => (
         <Ayah
           key={verse.number}
           verse={verse}
           index={index}
           surah={surah}
           Id={Id}
+          translation={surahWithTranslation}
         />
-      ))} */}
-      {surah?.ayahs.map((verse, index) => {
-        const translation = surahWithTranslation?.find(
-          (t) => t.number === verse.number
-        );
-        return (
-          <Ayah
-            key={verse.number}
-            verse={verse}
-            translation={translation}
-            index={index}
-            surah={surah}
-            Id={Id}
-          />
-        );
-      })}
+      ))}
 
       {/* <Ayah /> */}
     </div>
