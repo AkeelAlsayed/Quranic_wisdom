@@ -91,45 +91,77 @@ function ProductDetail() {
     useState("id.indonesian");
 
   useEffect(() => {
-    axios
-      .get(`https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`)
-      .then((response) => {
-        setSurah(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const fetchData = async () => {
+      try {
+        const response1 = await axios.get(
+          `https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`
+        );
+        setSurah(response1.data.data);
 
-    axios
-      .get("https://api.alquran.cloud/v1/edition/format/audio")
-      .then((response) => {
-        setAudioEditions(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        const response2 = await axios.get(
+          "https://api.alquran.cloud/v1/edition/format/audio"
+        );
+        setAudioEditions(response2.data.data);
 
-    axios
-      .get(
-        `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${selectedTranslationEdition}`
-      )
-      .then((response) => {
-        setSurahWithTranslation(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        const response3 = await axios.get(
+          `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${selectedTranslationEdition}`
+        );
+        setSurahWithTranslation(response3.data.data);
 
-    axios
-      .get("http://api.alquran.cloud/v1/edition/type/translation")
-      .then((response) => {
-        // console.log(response.data.data);
-        setTranslationEditions(response.data.data);
-      })
-      .catch((error) => {
+        const response4 = await axios.get(
+          "http://api.alquran.cloud/v1/edition/type/translation"
+        );
+        setTranslationEditions(response4.data.data);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
+
+    fetchData();
   }, [Id, selectedAudioEdition]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`)
+  //     .then((response) => {
+  //       setSurah(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  //   axios
+  //     .get("https://api.alquran.cloud/v1/edition/format/audio")
+  //     .then((response) => {
+  //       setAudioEditions(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  //   axios
+  //     .get(
+  //       `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${selectedTranslationEdition}`
+  //     )
+  //     .then((response) => {
+  //       setSurahWithTranslation(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  //   axios
+  //     .get("http://api.alquran.cloud/v1/edition/type/translation")
+  //     .then((response) => {
+  //       // console.log(response.data.data);
+  //       setTranslationEditions(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, [Id, selectedAudioEdition]);
+
+  // console.log(translationEditions);
+  console.log(surahWithTranslation);
 
   const handleAudioEditionChange = (event) => {
     setSelectedAudioEdition(event.target.value);
@@ -175,7 +207,7 @@ function ProductDetail() {
           index={index}
           surah={surah}
           Id={Id}
-          translation={surahWithTranslation}
+          // translation={surahWithTranslation}
         />
       ))}
 

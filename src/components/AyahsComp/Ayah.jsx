@@ -227,15 +227,12 @@
 // export default Ayah;
 
 import React, { useState, useEffect } from "react";
-// import Audio from "../AudioPlayerComp/AudioPlayer";
 import "./Ayah.scss";
 
 function Ayah({ surah, verse, index, Id, translation }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [currentAudioIndex, setCurrentAudioIndex] = useState(index);
-
-  // const [audioProgress, setAudioProgress] = useState(0);
 
   useEffect(() => {
     const audio = document.querySelector(
@@ -271,50 +268,8 @@ function Ayah({ surah, verse, index, Id, translation }) {
       `audio[data-index="${currentAudioIndex}"]`
     );
     audio.play();
-
-    // test ended
-    // setAudioProgress(audio.duration);
-    // console.log(audio.duration);
-    // Create an interval to update the slider value every 50 milliseconds
-    // let intervalId = setInterval(() => {
-    //   let slider = document.querySelector(
-    //     `input[data-index="${currentAudioIndex}"]`
-    //   );
-    //   slider.value = audio.currentTime;
-    // }, 50);
-
-    // // Clear the interval when the audio ends
-    // audio.addEventListener("ended", () => clearInterval(intervalId));
-  };
-  // console.log(surah.edition.language);
-  // const array = translation[1].ayahs;
-  // console.log(array);
-  // console.log(selectedTranslationEdition);
-  const handlePause = () => {
-    setIsPlaying(false);
-    const audio = document.querySelector(
-      `audio[data-index="${currentAudioIndex}"]`
-    );
-    audio.pause();
   };
 
-  function handleRestart(e) {
-    e.preventDefault();
-    const audio = document.getElementsByTagName("audio")[index];
-    audio.pause();
-    audio.currentTime = 0;
-    setIsPlaying(false);
-    // audio.play();
-  }
-  // console.log(surah);
-
-  // const handleAudioTimeUpdate = (event) => {
-  //   console.log(event);
-  //   const { currentTime, duration } = event.target;
-  //   setAudioProgress((currentTime / duration) * 100);
-  // };
-  // console.log(surahTranslated)
-  // console.log(translation);
   let text;
   if (
     verse.text.includes("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ") &&
@@ -324,31 +279,11 @@ function Ayah({ surah, verse, index, Id, translation }) {
   } else {
     text = verse.text;
   }
-  // const bismie = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
   return (
     <div className={`verse ${verse.number}`}>
-      {/* <p>{verse.number == 1 && verse.text}</p> */}
-      {/* <p>{verse.text !=="بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ" && bismie   } </p> */}
-      {/* <p>{ayahsArray.edition.language}</p> */}
       <div>Recitation language :{surah.edition.language}</div>
       <p>{text}</p>
 
-      {/* {Id !== 1 && verse.number==8 ? text:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"} */}
-      {/* {verse.text.includes("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")
-        ? verse.text.replace("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ", "")
-        : verse.text} */}
-      {/* {isPlaying ? (
-        <button className="restart-button" onClick={handlePause}>
-          Pause
-        </button>
-      ) : (
-        <button className="restart-button" onClick={handlePlay}>
-          Play
-        </button>
-      )}
-      <button className="restart-button" onClick={handleRestart}>
-        Restart
-      </button> */}
       <audio
         className="audio"
         key={index}
@@ -356,40 +291,8 @@ function Ayah({ surah, verse, index, Id, translation }) {
         data-index={index}
         controls={true}
         onPlay={handlePlay}
-
-        // style={{ display: "hidden", background: "blue" }}
-        // style={{
-        //   width: "80%",
-        //   margin: "50px auto",
-        //   padding: "23px",
-        //   border: "none",
-        //   outline: "none",
-        //   boxShadow: "0px 0px 20px 10px",
-        //   backgroundColor: "lightgray",
-        //   borderRadius: "50px",
-        //   display: "block",
-        //   position: "relative",
-        //   top: "-20px",
-        //   left: "50%",
-        //   transform: "translateX(-50%)",
-        //   transition: "all 0.3s ease",
-        //   "&:hover": {
-        //     top: "-30px",
-        //     boxShadow: "0px 0px 30px 20px",
-        //     transform: "scale(1.05) translateX(-50%)",
-        //   },
-        //   "&:active": {
-        //     top: "-40px",
-        //     boxShadow: "0px 0px 40px 30px",
-        //     transform: "scale(1.1) translateX(-50%)",
-        //   },
-        // }}
       />
-      {/* <Audio
-        source={verse.audio}
-        index={index}
-        currentAudioIndex={currentAudioIndex}
-      /> */}
+
       <div className="wrapper">
         <div className="item">hizbQuarter {verse.hizbQuarter}</div>
         <div className="item">juz {verse.juz}</div>
