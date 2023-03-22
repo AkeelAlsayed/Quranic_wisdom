@@ -87,38 +87,66 @@ function ProductDetail() {
   const [translationEditions, setTranslationEditions] = useState([]);
   const [selectedAudioEdition, setSelectedAudioEdition] =
     useState("ar.alafasy");
-  const [selectedTranslationEdition, setSelectedTranslationEdition] =
-    useState("id.indonesian");
+  const [selectedTranslationEditions, setSelectedTranslationEdition] = useState(
+    []
+  );
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response1 = await axios.get(
+  //         `https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`
+  //       );
+  //       setSurah(response1.data.data);
+
+  //       const response2 = await axios.get(
+  //         "https://api.alquran.cloud/v1/edition/format/audio"
+  //       );
+  //       setAudioEditions(response2.data.data);
+
+  //       const response3 = await axios.get(
+  //         `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${selectedTranslationEdition}`
+  //       );
+  //       setSurahWithTranslation(response3.data.data);
+
+  //       const response4 = await axios.get(
+  //         "http://api.alquran.cloud/v1/edition/type/translation"
+  //       );
+  //       setTranslationEditions(response4.data.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [Id, selectedAudioEdition]);
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchSurahData = async () => {
       try {
-        const response1 = await axios.get(
-          `https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`
-        );
-        setSurah(response1.data.data);
-
-        const response2 = await axios.get(
-          "https://api.alquran.cloud/v1/edition/format/audio"
-        );
-        setAudioEditions(response2.data.data);
-
-        const response3 = await axios.get(
-          `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${selectedTranslationEdition}`
-        );
-        setSurahWithTranslation(response3.data.data);
-
-        const response4 = await axios.get(
-          "http://api.alquran.cloud/v1/edition/type/translation"
-        );
-        setTranslationEditions(response4.data.data);
+        const [
+          surahResponse,
+          audioEditionsResponse,
+          translationResponse,
+          translationEditionsResponse,
+        ] = await Promise.all([
+          axios.get(
+            `https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`
+          ),
+          axios.get("https://api.alquran.cloud/v1/edition/format/audio"),
+          axios.get(formatTranslationUrl(selectedTranslationEditions)),
+          axios.get("http://api.alquran.cloud/v1/edition/type/translation"),
+        ]);
+        setSurah(surahResponse.data.data);
+        setAudioEditions(audioEditionsResponse.data.data);
+        setSurahWithTranslation(translationResponse.data.data);
+        setTranslationEditions(translationEditionsResponse.data.data);
       } catch (error) {
         console.log(error);
       }
     };
+    fetchSurahData();
+  }, [Id, selectedAudioEdition, selectedTranslationEditions]);
 
-    fetchData();
-  }, [Id, selectedAudioEdition]);
   // useEffect(() => {
   //   axios
   //     .get(`https://api.alquran.cloud/v1/surah/${Id}/${selectedAudioEdition}`)
@@ -161,7 +189,14 @@ function ProductDetail() {
   // }, [Id, selectedAudioEdition]);
 
   // console.log(translationEditions);
-  console.log(surahWithTranslation);
+  console.log(selectedTranslationEditions);
+  const formatTranslationUrl = (selectedTranslationEditions) => {
+    // Join the selected translation editions with a comma
+    const formattedEditions = selectedTranslationEditions.join(",");
+
+    // Return the formatted URL
+    return `https://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,${formattedEditions}`;
+  };
 
   const handleAudioEditionChange = (event) => {
     setSelectedAudioEdition(event.target.value);
